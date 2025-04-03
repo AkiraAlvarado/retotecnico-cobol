@@ -20,19 +20,14 @@ Antes de ejecutar el script, asegúrate de tener instalados los siguientes requi
 
 ```bash
 pip install pandas
-
-
-# Enfoque y Solución 
-
+```
 ## 1️⃣ Lectura de Datos con Pandas
 Se utiliza `pd.read_csv()` para cargar los datos en un DataFrame, lo que permite manipular la información de manera eficiente. Esto es clave para trabajar con grandes volúmenes de datos, ya que pandas optimiza las operaciones de lectura y filtrado.
 
 ## 2️⃣ Cálculo de Sumas por Tipo de Transacción
 Se filtran los valores donde `Tipo == "Crédito"` y `Tipo == "Débito"` para sumar los montos de cada categoría con `.sum()`. Esto permite calcular el balance final de forma rápida con la fórmula:
 
-```python
 balance_final = suma_credito - suma_debito
-```
 
 ## 3️⃣ Detección de la Transacción de Mayor Monto
 Se usa `.idxmax()` para encontrar la fila con el monto más alto, lo que nos permite obtener la transacción con el monto más grande. Esto se hace en una sola pasada para optimizar el tiempo de ejecución.
